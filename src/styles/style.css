@@ -9,7 +9,24 @@ body {
   justify-content: center;
   align-items: center;
   background: #fff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skip-link {
+  padding: 0.8em;
+  background: #8fd9a8;
+  width: 200px;
+  position: absolute;
+  color: #0061a8;
+  border: 2px solid #0061a8;
+  border-radius: 10px;
+  z-index: 100;
+  top: -100px;
+  left: 0;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 .brand span,
@@ -107,11 +124,12 @@ body {
   font-weight: bold;
 }
 
-.hero .hero-inner .hero-title {
+.hero .hero-inner h2.hero-title {
   font-family: "Courgette", cursive, serif;
   text-shadow: 0 0 2px #000;
   letter-spacing: 1px;
   line-height: 24px;
+  font-size: 18px;
 }
 
 .card {
@@ -185,16 +203,20 @@ body {
   color: #8b9bce;
 }
 
-main {
-  width: 100%;
+.card:hover {
+  box-shadow: 0 4px 10px 0 rgba(247, 194, 21, 0.753);
 }
 
-main section.content h1 {
+h3 {
   font-family: "lobster", cursive, serif;
   text-align: center;
   margin: 10px;
   color: #000;
-  font-size: 24px;
+  font-size: 22px;
+}
+
+main {
+  width: 100%;
 }
 
 main section.content #list-restaurant {
@@ -223,6 +245,9 @@ footer p {
 }
 
 @media screen and (min-width: 769px) {
+  section.hero .hero-inner h2.hero-title {
+    line-height: 36px;
+  }
   .card {
     margin: 25px;
   }
@@ -271,5 +296,9 @@ footer p {
     text-decoration: none;
     color: #fbe0c4;
   }
+}
+
+*:focus {
+  outline: 4px dashed orange;
 }
 /*# sourceMappingURL=style.css.map */

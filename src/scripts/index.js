@@ -7,7 +7,7 @@ import data from "../DATA.json";
 let bankData = "";
 data.restaurants.forEach((data) => {
   bankData += `
-    <div class="card">
+    <div class="card" tabindex="0">
         <div class="cardImage">
         <img src="${data.pictureId}" alt="gambar ${
     data.name
@@ -15,7 +15,9 @@ data.restaurants.forEach((data) => {
     data.city
   }</span> <span class="cardRating">  Rating : ${data.rating} </span>
   </div>
-        <div class="cardTitle"> <a href="#" > ${data.name} </a> </div>
+        <div class="cardTitle">  <a href="#" ><h4> ${
+          data.name
+        } </h4></a>  </div>
         
         <div class="cardDesc">${data.description.substring(0, 200)}</div>
     </div>

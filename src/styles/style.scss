@@ -9,7 +9,22 @@ body {
   justify-content: center;
   align-items: center;
   background: #fff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.skip-link {
+  padding: 0.8em;
+  background: #8fd9a8;
+  width: 200px;
+  position: absolute;
+  color: #0061a8;
+  border: 2px solid #0061a8;
+  border-radius: 10px;
+  z-index: 100;
+  top: -100px;
+  left: 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 // awal nama brand
@@ -106,11 +121,12 @@ body {
   .hero-inner {
     color: white;
     font-weight: bold;
-    .hero-title {
+    h2.hero-title {
       font-family: "Courgette", cursive, serif;
       text-shadow: 0 0 2px #000;
       letter-spacing: 1px;
       line-height: 24px;
+      font-size: 18px;
     }
   }
 }
@@ -186,18 +202,24 @@ body {
   }
 }
 
+.card:hover {
+  box-shadow: 0 4px 10px 0 rgba(247, 194, 21, 0.753);
+}
+
 // akhir card
+
+h3 {
+  font-family: "lobster", cursive, serif;
+  text-align: center;
+  margin: 10px;
+  color: #000;
+  font-size: 22px;
+}
+
+// awal main
 main {
   width: 100%;
   section.content {
-    h1 {
-      font-family: "lobster", cursive, serif;
-      text-align: center;
-      margin: 10px;
-      color: #000;
-      font-size: 24px;
-    }
-
     #list-restaurant {
       width: 100%;
       background: #8ab6d6;
@@ -209,6 +231,7 @@ main {
     }
   }
 }
+// akhir main
 
 // awal footer
 footer {
@@ -227,6 +250,13 @@ footer {
 }
 
 @media screen and (min-width: 769px) {
+  section.hero {
+    .hero-inner {
+      h2.hero-title {
+        line-height: 36px;
+      }
+    }
+  }
   .card {
     margin: 25px;
   }
@@ -261,13 +291,6 @@ footer {
       display: none;
     }
 
-    // .list-nav-draw {
-    //   font-family: "Courgette", cursive, serif;
-    //   display: flex;
-    //   justify-content: space-around;
-    //   align-items: center;
-    // }
-
     .list-nav-draw {
       font-family: "Courgette", cursive, serif;
 
@@ -289,4 +312,8 @@ footer {
       }
     }
   }
+}
+
+*:focus {
+  outline: 4px dashed orange;
 }
