@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Apps Starter Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="header">
+
+    <nav id="drawer">
+      <div class="brand"><span>Chopo</span>Taurant</div>
+
+      <ul class="list-nav-draw">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="#">Favorite</a></li>
+        <li class="nav-item"><a href="https://www.linkedin.com/in/dodi-herlangga-a0495b1b9/">About Us</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="brand-slider"><span>Chopo</span>Taurant</div>
+    <div class="wrapper">
+
+      <a id="Hamburger-nav" href="#">☰</a>
+    </div>
+    <div class="slider-nav">
+      <ul class="list-nav">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="#">Favorite</a></li>
+        <li class="nav-item"><a href="https://www.linkedin.com/in/dodi-herlangga-a0495b1b9/">About Us</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-title">kami adalah perusahaan yang menyediakan jasa pencarian restaurant <br> yang menyajikan
+        berbagai hidangan
+        berkualitas dengan pelayanan terbaik
+      </div>
+    </div>
+  </div>
+  <main>
+    <section class="content">
+      <!-- dibawah sini menampilkan daftar restaurant berdasarkan DATA.json -->
+      <h1>Explore Restaurant</h1>
+      <div class="container">
+        <div id="list-restaurant"></div>
+
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2021 - ChopoTaurant</p>
+  </footer>
+
+  <script>
+    document.getElementById('Hamburger-nav').addEventListener('click', () => {
+      document.querySelector('.slider-nav').classList.toggle('open')
+    })
+  </script>
+</body>
+
+</html>
