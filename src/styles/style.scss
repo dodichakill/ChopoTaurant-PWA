@@ -87,16 +87,16 @@ body {
 
       .nav-item {
         text-align: center;
-        border-bottom: 1px solid white;
         color: #fbe0c4;
-        padding: 10px;
-        height: 44px;
       }
       .nav-item a {
         color: #fbe0c4;
-
+        border-bottom: 1px solid lightblue;
+        height: 44px;
         width: 100%;
+        padding: 0.6em;
         text-decoration: none;
+        display: block;
       }
     }
   }
