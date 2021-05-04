@@ -211,7 +211,7 @@ h3 {
   font-family: "lobster", cursive, serif;
   text-align: center;
   margin: 10px;
-  color: #000;
+  color: #536ab6;
   font-size: 22px;
 }
 
@@ -219,7 +219,48 @@ main {
   width: 100%;
 }
 
-main section.content #list-restaurant {
+main article.precontent {
+  width: 100%;
+  background: #8fd9a8;
+  display: grid;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+main article.precontent h2 {
+  font-size: 18px;
+  color: #536ab6;
+}
+
+main article.precontent .precards {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Courgette", cursive, serif;
+  color: #eeffff;
+}
+
+main article.precontent .precards .precard {
+  box-sizing: border-box;
+  padding: 0.5em;
+  width: 145px;
+  height: auto;
+  margin: 10px;
+  border-radius: 1em;
+  background-color: #28b5b5;
+  text-align: left;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+
+main article.precontent .precards .precard .preimg img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+main article.content #list-restaurant {
   width: 100%;
   background: #8ab6d6;
   overflow: auto;
@@ -295,6 +336,13 @@ footer p {
   .header .list-nav-draw li a {
     text-decoration: none;
     color: #fbe0c4;
+    transition: 0.3s ease;
+  }
+  .header .list-nav-draw li a:hover {
+    color: white;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 5px;
   }
 }
 

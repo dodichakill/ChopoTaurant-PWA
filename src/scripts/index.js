@@ -2,8 +2,7 @@ import "regenerator-runtime"; /* for async await transpile */
 import "../styles/style.css";
 import data from "../DATA.json";
 
-// console.log(data);
-
+// script menampilkan DATA.json pada card
 let bankData = "";
 data.restaurants.forEach((data) => {
   bankData += `
@@ -26,3 +25,8 @@ data.restaurants.forEach((data) => {
 });
 
 document.getElementById("list-restaurant").innerHTML = bankData;
+
+// script hamburger menu
+document.getElementById("Hamburger-nav").addEventListener("click", () => {
+  document.querySelector(".slider-nav").classList.toggle("open");
+});
