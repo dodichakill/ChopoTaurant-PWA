@@ -135,7 +135,7 @@ body {
 // awal card
 .card {
   font-family: "Courgette", cursive, serif;
-
+  transition: 0.3s ease;
   margin: 10px;
   position: relative;
   width: 320px;
@@ -203,7 +203,8 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 4px 10px 0 rgba(247, 194, 21, 0.753);
+  box-shadow: 0 4px 10px 0 rgba(21, 213, 247, 0.753);
+  transform: scale(1.1);
 }
 
 // akhir card
@@ -251,11 +252,15 @@ main {
         text-align: left;
         box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.2);
         font-size: 16px;
+        transition: 0.3s ease;
 
         .preimg img {
           width: 100%;
           border-radius: 1em;
         }
+      }
+      .precard:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -298,11 +303,6 @@ footer {
       }
     }
   }
-
-  // main .precontent .precards {
-  //   width: 760px;
-  //   background-color: red;
-  // }
 
   .card {
     margin: 25px;
