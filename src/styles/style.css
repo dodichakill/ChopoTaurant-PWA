@@ -94,6 +94,7 @@ body {
   border-bottom: 1px solid white;
   color: #fbe0c4;
   padding: 10px;
+  height: 44px;
 }
 
 .header .slider-nav .list-nav .nav-item a {
@@ -344,6 +345,8 @@ footer p {
     text-decoration: none;
     color: #fbe0c4;
     transition: 0.3s ease;
+    width: 44px;
+    height: 44px;
   }
   .header .list-nav-draw li a:hover {
     color: white;
