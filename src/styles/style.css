@@ -334,26 +334,37 @@ footer p {
     justify-content: space-around;
     list-style: none;
     margin-bottom: 10px;
+    height: 44px;
     position: relative;
     right: 0;
   }
-  .header .list-nav-draw li {
+  .header .list-nav-draw .nav-item {
     padding: 0 1em 0 1em;
     position: relative;
     top: 6px;
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
-  .header .list-nav-draw li a {
+  .header .list-nav-draw .nav-item a {
     text-decoration: none;
-    color: #fbe0c4;
-    transition: 0.3s ease;
-    width: 44px;
-    height: 44px;
-  }
-  .header .list-nav-draw li a:hover {
     color: white;
-    border: 1px solid white;
-    box-sizing: border-box;
-    padding: 5px;
+    transition: 0.3s ease;
+    width: auto;
+    height: 44px;
+    background: #4bc2f1;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    border: 2px solid whitesmoke;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .list-nav-draw .nav-item a:hover {
+    color: white;
+    border: 2px solid white;
+    background: orange;
   }
 }
 
