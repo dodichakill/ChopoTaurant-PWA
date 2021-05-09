@@ -8,7 +8,8 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #0379cc;
+  min-height: 100vh;
 }
 .skip-link {
   padding: 0.8em;
@@ -28,83 +29,91 @@ body {
 }
 
 // awal nama brand
-.brand span,
-.brand-slider span {
+.brand span {
   color: orange;
 }
 // akhir nama brand
 
-// awal header
-.header {
+// awal app-bar
+
+.app-bar {
   width: 100%;
-  background: #2978b5;
-  #drawer {
-    display: none;
-  }
+  padding: 8px 16px;
+  background-color: #0061a8;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
-  .brand-slider {
-    text-align: center;
-    font-weight: 600;
-    font-family: "lobster", cursive, serif;
-    font-size: 1.7em;
-    padding: 0.2em;
-    color: #fbe0c4;
-    background: #0061a8;
-  }
-
-  .wrapper {
-    margin: 10px auto;
-    width: 100%;
+  .app-bar-menu {
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    #Hamburger-nav {
-      height: 44px;
-      width: 44px;
-      line-height: 44px;
-      background: lightseagreen;
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 18px;
+      padding: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .app-bar-brand {
+    display: flex;
+    align-items: center;
+    font-family: "lobster", cursive, serif;
+
+    h1 {
+      color: white;
+      font-size: 22px;
+      user-select: none;
+
+      span {
+        color: orange;
+      }
+    }
+  }
+
+  .app-bar-nav {
+    position: absolute;
+    top: 50px;
+    left: -1800px;
+    width: 100%;
+    background: #0061a8;
+    transition: all 0.3s;
+    padding: 8px;
+    overflow: hidden;
+    font-family: "Courgette", cursive, serif;
+
+    ul li a {
+      background: transparent;
+      border-radius: 1em;
+      display: inline-block;
       text-decoration: none;
-      color: #8fd9a8;
-      width: 50px;
+      color: white;
+      border: 1px solid white;
+      padding: 8px;
+      margin-bottom: 5px;
+      width: 100%;
+      height: 44px;
+      transition: 0.35s ease;
       text-align: center;
     }
-  }
-  .slider-nav {
-    width: 100%;
-    padding: 1em;
-    transform: translate(-1000px, 0);
-    position: absolute;
-    top: 115px;
-    left: 0;
-    background: #0061a8;
-    transition: 0.35s ease-in;
 
-    .list-nav {
-      background: #0061a8;
-      list-style: none;
-      width: 100%;
-
-      .nav-item {
-        text-align: center;
-        color: #fbe0c4;
-      }
-      .nav-item a {
-        color: #fbe0c4;
-        border-bottom: 1px solid lightblue;
-        height: 44px;
-        width: 100%;
-        padding: 0.6em;
-        text-decoration: none;
-        display: block;
-      }
+    ul li a:hover {
+      background: orange;
     }
   }
-  .slider-nav.open {
-    transform: translate(0, 0);
+
+  .app-bar-nav.open {
+    left: 0;
   }
 }
-// akhir header
+
+// akhir app-bar
 
 // awal hero
 .hero {
@@ -136,7 +145,7 @@ body {
 // awal card
 .card {
   font-family: "Courgette", cursive, serif;
-  transition: 0.3s ease;
+  transition: 0.35s ease;
   margin: 10px;
   position: relative;
   width: 320px;
@@ -205,7 +214,7 @@ body {
 
 .card:hover {
   box-shadow: 0 4px 10px 0 rgba(21, 213, 247, 0.753);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 // akhir card
@@ -221,6 +230,7 @@ h3 {
 // awal main
 main {
   width: 100%;
+  background: white;
   article.precontent {
     width: 100%;
     background: #8fd9a8;
@@ -267,6 +277,8 @@ main {
   }
 
   article.content {
+    background: white;
+
     #list-restaurant {
       width: 100%;
       background: #8ab6d6;
@@ -296,6 +308,39 @@ footer {
   }
 }
 
+// responsive
+
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+
+    .app-bar-brand {
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+    .app-bar-menu {
+      display: none;
+    }
+    .app-bar-nav {
+      position: static;
+      width: 100%;
+
+      ul li {
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          width: 120px;
+          text-align: center;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 769px) {
   section.hero {
     .hero-inner {
@@ -308,82 +353,18 @@ footer {
   .card {
     margin: 25px;
   }
-  .header {
+  .app-bar {
     background: #0061a8;
     width: 100%;
     box-sizing: border-box;
-    .wrapper {
-      display: none;
-    }
-
-    #drawer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .brand {
-        color: white;
-        text-align: left;
-        font-weight: 600;
-        font-size: 1.8em;
-        padding: 0.2em;
-        font-family: "lobster", cursive, serif;
-      }
-    }
-
-    .brand-slider {
-      display: none;
-    }
-
-    .slider-nav {
-      display: none;
-    }
-
-    .list-nav-draw {
-      font-family: "Courgette", cursive, serif;
-
-      display: flex;
-      justify-content: space-around;
-      // align-items: center;
-      list-style: none;
-      margin-bottom: 10px;
-      height: 44px;
-      position: relative;
-      right: 0;
-      .nav-item {
-        padding: 0 1em 0 1em;
-        position: relative;
-        top: 6px;
-        height: auto;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-
-        a {
-          text-decoration: none;
-          color: white;
-          transition: 0.3s ease;
-          width: auto;
-          height: 44px;
-          background: #4bc2f1;
-          padding: 0.3em;
-          border-radius: 0.5em;
-          border: 2px solid whitesmoke;
-          display: grid;
-          justify-content: center;
-          align-items: center;
-
-          &:hover {
-            color: white;
-            border: 2px solid white;
-            background: orange;
-          }
-        }
-      }
-    }
   }
 }
 
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar-brand h1 {
+    font-size: 2em;
+  }
+}
 *:focus {
-  outline: 4px dashed orange;
+  outline: 3px dashed orange;
 }
