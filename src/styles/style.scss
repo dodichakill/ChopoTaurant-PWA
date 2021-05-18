@@ -317,7 +317,7 @@ footer {
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.39);
-  background: #eeffff;
+  background: #8fd9a8;
   border-radius: 0 0 1em 1em;
 
   h3 {
@@ -335,17 +335,23 @@ footer {
     font-family: "Courgette", cursive, serif;
     font-size: 1.5rem;
     letter-spacing: 2px;
+    text-align: center;
   }
 
   .wrapInfo {
     color: #8b9bce;
     .imageWrap {
       width: 100%;
+      background: #eeffff;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1em;
 
       img {
         width: 100%;
         border-radius: 1em;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -354,6 +360,7 @@ footer {
       box-sizing: border-box;
       padding: 10px;
       border-radius: 1em;
+      background: #eeffff;
 
       h3 {
         margin-left: 0;
@@ -364,6 +371,7 @@ footer {
   .overview {
     line-height: 24px;
     letter-spacing: 1px;
+    background: #eeffff;
     display: grid;
     justify-content: center;
     align-items: center;

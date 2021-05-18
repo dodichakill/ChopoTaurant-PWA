@@ -3,7 +3,7 @@
   "short_name": "ChopoTaurant",
   "description": "aplikasi jasa pencari restaurant terbaik",
   "theme_color": "#0061a8",
-  "background_color": "#0061a8",
+  "background_color": "#4bc2f1",
   "display": "standalone",
   "scope": "/",
   "start_url": "/index.html",
