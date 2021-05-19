@@ -1,11 +1,11 @@
-import CONFIG from '../../globals/config';
+import API_ENDPOINT from '../../globals/api-endpoint';
 
 const CreateRestaurantDetailTemplate = (restaurant) => `
 
     <h1 class="restaurantName">${restaurant.name}</h1>
     <div class="wrapInfo"> 
         <div class="imageWrap"> 
-            <img src="${CONFIG.IMAGE_URL}${restaurant.pictureId}" />
+            <img src="${API_ENDPOINT.IMAGE_MEDIUM_URL}${restaurant.pictureId}" alt="${restaurant.name}" />
         </div>
         <div class="info">
         <h2>Information</h2>
@@ -51,6 +51,26 @@ const CreateRestaurantDetailTemplate = (restaurant) => `
         </div>
     </div>`;
 
+const createRestaurantItemTemplate = (restaurant) => `
+<div class="card" tabindex="0">
+    <div class="cardImage">
+        <img src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" alt="${restaurant.name
+    }" /> 
+        <span class="city">kota ${restaurant.city
+    }</span> 
+        <span class="cardRating">  Rating : ${restaurant.rating} </span>
+    </div>
+    <div class="cardTitle">  
+        <h4>
+            <a href="/#/detail/${restaurant.id}" > ${restaurant.name} </a> 
+        </h4>  
+    </div>
+        
+    <div class="cardDesc">${restaurant.description.substring(0, 150)}</div>
+</div>
+
+  `;
+
 const createLikeButtonTemplate = () => `
     <button class="like" aria-label="like this movie" id="likeButton">
         <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -58,7 +78,7 @@ const createLikeButtonTemplate = () => `
 `;
 
 const createLikedButtonTemplate = () => `
-    <button class="like" aria-label="like this movie" id="likeButton">
+    <button class="like" aria-label="unlike this movie" id="likeButton">
         <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
 `;
@@ -67,4 +87,5 @@ export {
     createLikeButtonTemplate,
     createLikedButtonTemplate,
     CreateRestaurantDetailTemplate,
+    createRestaurantItemTemplate,
 };

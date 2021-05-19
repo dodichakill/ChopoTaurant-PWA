@@ -29,7 +29,7 @@ const GetDataRestaurant = () => {
 
       <div class="card" tabindex="0">
         <div class="cardImage">
-          <img src="https://restaurant-api.dicoding.dev/images/small/${data.pictureId}" alt="gambar ${data.name
+          <img src="https://restaurant-api.dicoding.dev/images/small/${data.pictureId}" alt=" ${data.name
           }" /> <span class="city">kota ${data.city
           }</span> <span class="cardRating">  Rating : ${data.rating} </span>
         </div>
