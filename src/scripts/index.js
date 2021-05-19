@@ -2,6 +2,7 @@ import "regenerator-runtime"; /* for async await transpile */
 import "../styles/style.css";
 import App from './views/app';
 import CONFIG from "./globals/config";
+import swRegister from './utils/sw-register';
 
 // script navigasi drawer
 const app = new App({
@@ -52,4 +53,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });

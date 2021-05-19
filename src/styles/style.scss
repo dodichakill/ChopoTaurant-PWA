@@ -320,6 +320,22 @@ footer {
   background: #8fd9a8;
   border-radius: 0 0 1em 1em;
 
+  .like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   h3 {
     text-align: left;
   }
@@ -351,7 +367,6 @@ footer {
       img {
         width: 100%;
         border-radius: 1em;
-        box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -384,18 +399,49 @@ footer {
     .description p {
       color: #8b9bce;
     }
+
     .menuContainer {
       margin-top: 10px;
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      box-sizing: border-box;
+      position: relative;
       color: #8b9bce;
+      grid-template-areas:
+        "title title"
+        "foods drinks";
 
-      .menuFoods ul {
+      h3 {
+        display: grid;
+        grid-area: title;
+      }
+      h4 {
+        font-size: 1em;
+        color: #28b5b5;
+      }
+      .menuDrinks,
+      .menuFoods {
         position: relative;
-        left: 16px;
+        background-image: linear-gradient(yellow, gold);
+        padding: 1em;
+        display: grid;
+        margin: 0 4px;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.25);
+        margin: 0 4px;
+        border-radius: 1em;
+        ul li {
+          list-style: none;
+        }
+      }
+      .menuDrinks {
+        grid-area: drinks;
+      }
+
+      .menuFoods {
+        grid-area: foods;
       }
     }
+
     .review-container {
       margin: 0 auto;
       width: 100%;

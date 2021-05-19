@@ -312,6 +312,23 @@ footer p {
   border-radius: 0 0 1em 1em;
 }
 
+.detail-restaurant .like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .detail-restaurant h3 {
   text-align: left;
 }
@@ -347,7 +364,6 @@ footer p {
 .detail-restaurant .wrapInfo .imageWrap img {
   width: 100%;
   border-radius: 1em;
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .detail-restaurant .wrapInfo .info {
@@ -385,13 +401,45 @@ footer p {
   margin-top: 10px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  position: relative;
   color: #8b9bce;
+  grid-template-areas: "title title" "foods drinks";
 }
 
-.detail-restaurant .overview .menuContainer .menuFoods ul {
+.detail-restaurant .overview .menuContainer h3 {
+  display: grid;
+  grid-area: title;
+}
+
+.detail-restaurant .overview .menuContainer h4 {
+  font-size: 1em;
+  color: #28b5b5;
+}
+
+.detail-restaurant .overview .menuContainer .menuDrinks,
+.detail-restaurant .overview .menuContainer .menuFoods {
   position: relative;
-  left: 16px;
+  background-image: linear-gradient(yellow, gold);
+  padding: 1em;
+  display: grid;
+  margin: 0 4px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.25);
+  margin: 0 4px;
+  border-radius: 1em;
+}
+
+.detail-restaurant .overview .menuContainer .menuDrinks ul li,
+.detail-restaurant .overview .menuContainer .menuFoods ul li {
+  list-style: none;
+}
+
+.detail-restaurant .overview .menuContainer .menuDrinks {
+  grid-area: drinks;
+}
+
+.detail-restaurant .overview .menuContainer .menuFoods {
+  grid-area: foods;
 }
 
 .detail-restaurant .overview .review-container {
