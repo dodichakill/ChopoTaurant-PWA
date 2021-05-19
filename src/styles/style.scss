@@ -474,8 +474,15 @@ footer {
 
 .favorite {
   display: grid;
-  justify-content: center;
   height: 100%;
+  width: 100%;
+
+  .restaurants {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
   h2 {
     text-align: center;
     font-family: "Courgette", cursive, serif;
@@ -529,7 +536,9 @@ footer {
       }
     }
   }
-
+  .detail-restaurant h1.restaurantName {
+    font-size: 2.3rem;
+  }
   .card {
     margin: 25px;
   }
@@ -537,6 +546,13 @@ footer {
     background: #0061a8;
     width: 100%;
     box-sizing: border-box;
+
+    .app-bar-nav {
+      display: grid;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 

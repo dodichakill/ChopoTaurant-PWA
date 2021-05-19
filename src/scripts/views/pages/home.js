@@ -1,6 +1,9 @@
+import { createRestaurantItemTemplate } from '../templates/template-creator';
+import CONFIG from '../../globals/config';
+
 const Home = {
-    async render() {
-        return `
+  async render() {
+    return `
         
     <section class="hero">
       <div class="hero-inner">
@@ -43,7 +46,7 @@ const Home = {
       </div>
     </article>
     <article class="content">
-      <!-- dibawah sini menampilkan daftar restaurant berdasarkan DATA.json -->
+     
       <h3 tabindex="0">Explore Restaurant</h3>
       <div class="container">
         <div id="list-restaurant"></div>
@@ -53,11 +56,29 @@ const Home = {
     </article>
 
         `;
-    },
+  },
 
-    async afterRender() {
-        // fungsi ini akan dipanggil setelah render()
-    },
+  async afterRender() {
+    // script fetch data API restaurant
+    const urlRestaurantList = `${CONFIG.BASE_URL}list`;
+    const containerRestaurants = document.getElementById("list-restaurant");
+    fetch(urlRestaurantList, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then(res => res.json())
+      .then((res) => {
+        let dataRestaurant = "";
+        const dataRest = res.restaurants;
+        dataRest.forEach((data) => {
+          dataRestaurant += createRestaurantItemTemplate(data);
+        });
+
+        containerRestaurants.innerHTML = dataRestaurant;
+      });
+  },
 };
 
 export default Home;
