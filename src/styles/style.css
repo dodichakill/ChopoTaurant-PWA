@@ -197,9 +197,10 @@ body {
   color: #536ab6;
 }
 
-.card .cardTitle a {
+.card .cardTitle h4 a {
   text-decoration: none;
   cursor: pointer;
+  padding: 10.5px 2px;
 }
 
 .card .cardDesc {
@@ -457,16 +458,24 @@ footer p {
 
 .detail-restaurant .overview .review-container .reviewer {
   box-sizing: border-box;
-  background: whitesmoke;
+  background: lightgreen;
   margin: 8px 0;
   border: 1px solid black;
-  border-radius: 0.5em;
+  border-radius: 1em;
   width: 100%;
   padding: 10px;
 }
 
+.detail-restaurant .overview .review-container .reviewer .user {
+  color: #0061a8;
+}
+
+.detail-restaurant .overview .review-container .reviewer .user span.date {
+  color: #28b5b5;
+}
+
 .detail-restaurant .overview .review-container .reviewer .review {
-  color: #201251;
+  color: #0599ba;
 }
 
 .favorite {

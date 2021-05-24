@@ -199,9 +199,12 @@ body {
     margin: 6px 0;
     color: #536ab6;
 
-    a {
-      text-decoration: none;
-      cursor: pointer;
+    h4 {
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        padding: 10.5px 2px;
+      }
     }
   }
 
@@ -457,15 +460,22 @@ footer {
 
       .reviewer {
         box-sizing: border-box;
-        background: whitesmoke;
+        background: lightgreen;
         margin: 8px 0;
         border: 1px solid black;
-        border-radius: 0.5em;
+        border-radius: 1em;
         width: 100%;
         padding: 10px;
 
+        .user {
+          color: #0061a8;
+
+          span.date {
+            color: #28b5b5;
+          }
+        }
         .review {
-          color: rgb(32, 18, 81);
+          color: #0599ba;
         }
       }
     }
