@@ -5,6 +5,7 @@ const LikeButtonPresenter = {
     async init({ likeButtonContainer, restaurant }) {
         this._likeButtonContainer = likeButtonContainer;
         this._restaurant = restaurant;
+        this._favoriteRestaurants = FavoriteRestaurantIdb;
 
         await this._renderButton();
     },
