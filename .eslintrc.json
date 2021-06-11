@@ -10,13 +10,15 @@
     "sourceType": "module"
   },
   "rules": {
-    "quotes": "off",
-    "indent": "off",
-    "linebreak-style": "off",
-    "arrow-parens": "off",
-    "no-unused-vars": "off",
-    "no-underscore-dangle": "off",
-    "no-restricted-global": "off",
-    "no-restricted-globals": "off"
+    "quotes": 0,
+    "indent": 0,
+    "linebreak-style": 0,
+    "arrow-parens": 0,
+    "no-unused-vars": 0,
+    "no-underscore-dangle": 0,
+    "no-restricted-global": 0,
+    "no-restricted-globals": 0,
+    "prefer-destructuring": 0,
+    "import/no-extraneous-dependencies": 0
   }
 }

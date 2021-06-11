@@ -19,28 +19,28 @@ const Home = {
       <h3 tabindex="0">kenapa harus memakai jasa kami?</h3>
       <div class="precards">
         <div class="precard" tabindex="0">
-          <div class="preimg"><img src="images/foods/1.jpg" alt="makanan 1"></div>
+          <div class="preimg"><img class="lazyload" data-src="images/foods/1.jpg" alt="makanan 1"></div>
           <p>kami memilih restaurant yang menyediakan hidangan sehat</p>
         </div>
         <div class="precard" tabindex="0">
-          <div class="preimg"><img src="images/foods/2.jpg" alt="makanan 2"></div>
+          <div class="preimg"><img class="lazyload" data-src="images/foods/2.jpg" alt="makanan 2"></div>
           <p>kami memilih restaurant yang menyediakan beragam macam hidangan</p>
 
         </div>
         <div class="precard" tabindex="0">
-          <div class="preimg"><img src="images/foods/3.jpg" alt="makanan 3"></div>
+          <div class="preimg"><img class="lazyload" data-src="images/foods/3.jpg" alt="makanan 3"></div>
           <p>kami memilih restaurant yang menyediakan hidangan penutup</p>
         </div>
         <div class="precard" tabindex="0">
-          <div class="preimg"><img src="images/foods/4.jpg" alt="makanan 4"></div>
+          <div class="preimg"><img class="lazyload" data-src="images/foods/4.jpg" alt="makanan 4"></div>
           <p>kami memilih restaurant yang menyediakan hidangan higienis</p>
         </div>
         <div class="precard" tabindex="0">
-          <div class="preimg"><img src="images/foods/5.jpg" alt="makanan 5"></div>
+          <div class="preimg"><img class="lazyload" data-src="images/foods/5.jpg" alt="makanan 5"></div>
           <p>kami memilih restaurant yang menyediakan hidangan bergizi</p>
         </div>
         <div class="precard" tabindex="0">
-          <div class="preimg"><img src="images/foods/6.jpg" alt="makanan 6"></div>
+          <div class="preimg"><img class="lazyload" data-src="images/foods/6.jpg" alt="makanan 6"></div>
           <p>kami memilih restaurant yang menyediakan hidangan khusus diet</p>
         </div>
       </div>
@@ -62,6 +62,7 @@ const Home = {
     // script fetch data API restaurant
     const urlRestaurantList = `${CONFIG.BASE_URL}list`;
     const containerRestaurants = document.getElementById("list-restaurant");
+    containerRestaurants.innerHTML = '<div class="spinner"><i class="fas fa-search"></i></div>';
     fetch(urlRestaurantList, {
       method: "GET",
       headers: {

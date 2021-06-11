@@ -5,7 +5,7 @@ const CreateRestaurantDetailTemplate = (restaurant) => `
     <h1 class="restaurantName">${restaurant.name}</h1>
     <div class="wrapInfo"> 
         <div class="imageWrap"> 
-            <img src="${API_ENDPOINT.IMAGE_MEDIUM_URL}${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
+            <img class="lazyload" data-src="${API_ENDPOINT.IMAGE_MEDIUM_URL}${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
         </div>
         <div class="info">
         <h2>Information</h2>
@@ -54,7 +54,7 @@ const CreateRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
 <div class="card" tabindex="0">
     <div class="cardImage">
-        <img src="${API_ENDPOINT.IMAGE_SMALL_URL}${restaurant.pictureId}" crossorigin="anonymous" alt="${restaurant.name
+        <img class="lazyload" data-src="${API_ENDPOINT.IMAGE_SMALL_URL}${restaurant.pictureId}" crossorigin="anonymous" alt="${restaurant.name
     }" /> 
         <span class="city">kota ${restaurant.city
     }</span> 

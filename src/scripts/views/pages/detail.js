@@ -16,6 +16,7 @@ const Detail = {
         const dataRestaurant = await RestaurantDbSource.detailRestaurant(url.id);
         const data = dataRestaurant.restaurant;
         const restaurantContainer = document.querySelector('#restaurant');
+        restaurantContainer.innerHTML = '<div class="spinner"><i class="fas fa-search"></i></div>';
         restaurantContainer.innerHTML = CreateRestaurantDetailTemplate(data);
 
         LikeButtonInitiator.init({
