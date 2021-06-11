@@ -62,7 +62,7 @@ const Home = {
     // script fetch data API restaurant
     const urlRestaurantList = `${CONFIG.BASE_URL}list`;
     const containerRestaurants = document.getElementById("list-restaurant");
-    containerRestaurants.innerHTML = '<div class="spinner"><i class="fas fa-search"></i></div>';
+    containerRestaurants.innerHTML = '<div class="spinner"><i class="fas fa-spinner"></i></div>';
     fetch(urlRestaurantList, {
       method: "GET",
       headers: {

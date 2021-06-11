@@ -1,4 +1,4 @@
-import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Favorite = {

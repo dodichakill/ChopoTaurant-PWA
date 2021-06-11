@@ -1,7 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import { CreateRestaurantDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const Detail = {
     async render() {
@@ -19,7 +19,7 @@ const Detail = {
         restaurantContainer.innerHTML = '<div class="spinner"><i class="fas fa-search"></i></div>';
         restaurantContainer.innerHTML = CreateRestaurantDetailTemplate(data);
 
-        LikeButtonInitiator.init({
+        LikeButtonPresenter.init({
             likeButtonContainer: document.querySelector('#likeButtonContainer'),
             restaurant: {
                 id: data.id,
