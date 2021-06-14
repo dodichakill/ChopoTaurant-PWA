@@ -27,7 +27,6 @@ const Detail = {
                 id: data.id,
                 name: data.name,
                 description: data.description,
-                backdrop_path: data.backdrop_path,
                 rating: data.rating,
                 city: data.city,
                 pictureId: data.pictureId,

@@ -1,17 +1,65 @@
+const assert = require('assert');
+
 Feature('Liking Restaurants');
 
 Before(({ I }) => {
-  I.amOnPage('/#/like');
+  I.amOnPage('/#/favorite');
 });
 
-// Scenario('showing empty liked restaurants', ({ I }) => {
-//   I.seeElement('#query');
-//   I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
-// });
+const firstCondition = "Kamu belum mempunyai restaurant favorite";
 
-Scenario('liking one restaurants', ({ I }) => {
-  I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
+Scenario('showing empty favorite restaurant', ({ I }) => {
+  I.seeElement('#restaurant');
+  I.see(firstCondition, '#restaurant');
+});
+
+Scenario('liking one restaurant', async ({ I }) => {
+  I.see(firstCondition, '#restaurant');
 
   I.amOnPage('/');
 
+  I.seeElement('.card a');
+
+  const firstRestaurant = locate('.cardTitle a').first();
+  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
+  I.click(firstRestaurant);
+
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('.card');
+  const likedRestaurantTitle = await I.grabTextFrom('.card a');
+
+  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+});
+
+Scenario('unliking one restaurant', async ({ I }) => {
+  I.see(firstCondition, '#restaurant');
+
+  I.amOnPage('/');
+
+  I.seeElement('.card a');
+  const firstRestaurant = locate('.cardTitle a').first();
+  const firstCardTitle = await I.grabTextFrom(firstRestaurant);
+  I.click(firstRestaurant);
+
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('#restaurant');
+  const likedCardTitle = await I.grabTextFrom('.card a');
+  assert.strictEqual(firstCardTitle, likedCardTitle);
+
+  I.click(likedCardTitle);
+
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.seeElement('#restaurant');
+  const noFavRestaurant = await I.grabTextFrom('#restaurant');
+
+  assert.strictEqual(noFavRestaurant, firstCondition);
 });

@@ -66,7 +66,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </h4>  
     </div>
         
-    <div class="cardDesc">${restaurant.description.substring(0, 150)}</div>
+    <div class="cardDesc">${restaurant.description.substring(0, 112)}</div>
 </div>
 
   `;

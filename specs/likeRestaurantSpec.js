@@ -56,6 +56,3 @@ describe('Liking A restaurant', () => {
     expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 });
-
-// TODO
-// Memberi nama yang lebih berbeda untuk createLikeButtonTemplate dan createLikedButtonTemplate.
