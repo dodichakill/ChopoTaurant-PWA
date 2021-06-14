@@ -1,0 +1,40 @@
+{
+  "precards": [
+    {
+      "content": "kami memilih restaurant yang menyediakan hidangan sehat",
+      "urlJpg": "images/foods/1.jpg",
+      "urlWebp": "images/foods/1.webp",
+      "no": "1"
+    },
+    {
+      "content": "kami memilih restaurant yang menyediakan beragam macam hidangan",
+      "urlJpg": "images/foods/2.jpg",
+      "urlWebp": "images/foods/2.webp",
+      "no": "2"
+    },
+    {
+      "content": "kami memilih restaurant yang menyediakan hidangan penutup",
+      "urlJpg": "images/foods/3.jpg",
+      "urlWebp": "images/foods/3.webp",
+      "no": "3"
+    },
+    {
+      "content": "kami memilih restaurant yang menyediakan hidangan higienis",
+      "urlJpg": "images/foods/4.jpg",
+      "urlWebp": "images/foods/4.webp",
+      "no": "4"
+    },
+    {
+      "content": "kami memilih restaurant yang menyediakan hidangan bergizi",
+      "urlJpg": "images/foods/5.jpg",
+      "urlWebp": "images/foods/5.webp",
+      "no": "5"
+    },
+    {
+      "content": "kami memilih restaurant yang menyediakan hidangan khusus diet",
+      "urlJpg": "images/foods/6.jpg",
+      "urlWebp": "images/foods/6.webp",
+      "no": "6"
+    }
+  ]
+}

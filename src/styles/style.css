@@ -157,6 +157,7 @@ body {
 
 .card .cardImage img {
   width: 100%;
+  height: 160px;
   border-radius: 1em 1em 0 0;
 }
 
@@ -265,8 +266,14 @@ main article.precontent .precards .precard {
   transition: 0.3s ease;
 }
 
+main article.precontent .precards .precard .preimg {
+  width: 100%;
+  height: 80px;
+}
+
 main article.precontent .precards .precard .preimg img {
   width: 100%;
+  height: 100%;
   border-radius: 1em;
 }
 
