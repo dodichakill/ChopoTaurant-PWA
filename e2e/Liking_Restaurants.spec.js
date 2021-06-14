@@ -1,5 +1,7 @@
 const assert = require('assert');
 
+// awal testing untuk fitur liking dan unliking
+
 Feature('Liking Restaurants');
 
 Before(({ I }) => {
@@ -63,3 +65,5 @@ Scenario('unliking one restaurant', async ({ I }) => {
 
   assert.strictEqual(noFavRestaurant, firstCondition);
 });
+
+// akhir testing untuk fitur liking dan unliking
