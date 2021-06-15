@@ -4,7 +4,7 @@ const CONFIG = {
     DATABASE_NAME: 'ChopoTaurant-database',
     DATABASE_VERSION: 1,
     OBJECT_STORE_NAME: 'restaurants',
-
+    KEY: 12345,
 };
 
 export default CONFIG;

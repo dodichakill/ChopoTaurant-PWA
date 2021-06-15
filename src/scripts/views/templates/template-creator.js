@@ -8,26 +8,28 @@ const CreateRestaurantDetailTemplate = (restaurant) => `
             <img class="lazyload" data-src="${API_ENDPOINT.IMAGE_MEDIUM_URL}${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
         </div>
         <div class="info">
-        <h2>Information</h2>
-            <h3>Category</h3>
-            ${restaurant.categories.map(category => category.name).join(' - ')}
-            <h3>City</h3>
-            ${restaurant.city}
-            <h3>Address</h3>
-            ${restaurant.address}
-            <h3>Rating</h3>
-            ⭐ ${restaurant.rating}
+            <h2>Informasi</h2>
+            <hr />
+            <h3><i class="fas fa-tags"></i> Kategori</h3>
+            <p>${restaurant.categories.map(category => category.name).join(' - ')}</p>
+            <h3><i class="fas fa-map-marker-alt"></i> Kota</h3>
+            <p>${restaurant.city}</p>
+            <h3><i class="fas fa-search-location"></i> Alamat</h3>
+            <p>${restaurant.address}</p>
+            <h3><i class="fas fa-star"></i> Penilaian</h3>
+            <p>⭐ ${restaurant.rating}</p>
         </div>
     </div>
 
     <div class="overview">
-    <h2>Overview</h2>
+    <h2>Informasi Lanjutan</h2>
+    <hr />
         <div class="description">
-        <h3>description</h3>
+        <h3><i class="fas fa-info-circle"></i> Rincian</h3>
         <p>${restaurant.description}</p>
         </div>
         <div class="menuContainer">
-            <h3>Daftar Menu</h3>
+            <h3>▉ Menu</h3>
             <div class="menuFoods"> 
                 <h4>Daftar Makanan</h4>
                 <ul>
@@ -42,10 +44,10 @@ const CreateRestaurantDetailTemplate = (restaurant) => `
             </div>
         </div>
         <div class="review-container">
-            <h3>Review</h3>
+            <h3><i class="fas fa-comments"></i> Review</h3>
             ${restaurant.customerReviews.map(user => ` 
             <div class="reviewer">  
-                <p class="user"> ${user.name} - <span class="date"> ${user.date} </span>  </p>  
+                <p class="user"> <span class="name"> ${user.name}</span> <span class="date"> ${user.date} </span>  </p>  
                 <p class="review"> ${user.review} </p>  
             </div>`).join('')}
         </div>

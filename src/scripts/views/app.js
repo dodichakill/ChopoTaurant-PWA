@@ -24,6 +24,13 @@ class App {
     async renderPage() {
         const url = UrlParser.parseActiveUrlWithCombiner();
         const page = routes[url];
+
+        const winUrl = window.location.hash;
+        const notFound = `<h1> Halaman Tidak Ditemukan </h1>`;
+        if (winUrl === 'aaa') {
+            this._content.innerHTML = await notFound.render();
+            await notFound.afterRender();
+        }
         this._content.innerHTML = await page.render();
         await page.afterRender();
     }

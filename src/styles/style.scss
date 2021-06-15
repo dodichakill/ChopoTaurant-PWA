@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #0379cc;
+  background: #fff;
   height: 100vh;
 }
 
@@ -325,8 +325,8 @@ footer {
     position: fixed;
     bottom: 16px;
     right: 16px;
-    background: #db0000;
-    color: white;
+    background: #3282b8;
+    color: gold;
     border: 0;
     border-radius: 50%;
     width: 55px;
@@ -335,6 +335,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 2px 4px rgba(118, 98, 230, 0.333);
+    transition: 0.3s all ease-in-out;
+  }
+  .like:hover {
+    transform: scale(1.3);
   }
 }
 .detail-restaurant {
@@ -345,9 +350,13 @@ footer {
   justify-items: center;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.39);
-  background: #8fd9a8;
+  box-shadow: 0 0 10px 2px rgb(234, 248, 255);
+  background: rgba(255, 255, 255, 0.986);
   border-radius: 0 0 1em 1em;
+
+  hr {
+    border: 1px solid #5d91f136;
+  }
 
   h3 {
     text-align: left;
@@ -376,6 +385,7 @@ footer {
       align-items: center;
       justify-content: center;
       border-radius: 1em;
+      border: 1px solid #4bc2f1;
 
       img {
         width: 100%;
@@ -390,8 +400,20 @@ footer {
       border-radius: 1em;
       background: #eeffff;
 
+      // .container {
+      //   width: 100%;
+      //   height: 100%;
+      //   display: grid;
+      //   justify-content: center;
+      //   align-items: center;
+      // }
+
       h3 {
         margin-left: 0;
+        span {
+          font-size: 1em;
+          margin-left: 5px;
+        }
       }
     }
   }
@@ -414,7 +436,7 @@ footer {
     }
 
     .menuContainer {
-      margin-top: 10px;
+      margin: 10px auto;
       width: 100%;
       display: grid;
       box-sizing: border-box;
@@ -468,18 +490,25 @@ footer {
 
       .reviewer {
         box-sizing: border-box;
-        background: lightgreen;
+        background: #bbe1fa;
         margin: 8px 0;
-        border: 1px solid black;
+        border: 1px solid #3282b886;
         border-radius: 1em;
         width: 100%;
         padding: 10px;
 
         .user {
-          color: #0061a8;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
 
+          span.name {
+            color: #0061a8;
+            font-weight: bold;
+          }
           span.date {
             color: #28b5b5;
+            font-size: 12px;
           }
         }
         .review {
@@ -490,6 +519,7 @@ footer {
   }
 }
 
+// favorite
 .favorite {
   display: grid;
   height: 100%;
@@ -514,6 +544,50 @@ footer {
     text-align: center;
     font-family: "Courgette", cursive, serif;
     margin: 18px;
+  }
+}
+
+// form add review
+.form-reviewer {
+  font-family: "Courgette", cursive, serif;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #eeffff;
+  margin: 10px auto 20px auto;
+  border-radius: 1em;
+  color: #0599ba;
+  box-shadow: 0 0 10px 2px rgb(234, 248, 255);
+  border: 1px solid #4bc2f1;
+
+  h3 {
+    text-align: left;
+  }
+  .form-name {
+    padding: 10px 0;
+    input {
+      margin-top: 4px;
+      width: 100%;
+      padding: 0.5em;
+    }
+  }
+  .form-review {
+    padding: 10px 0;
+    textarea {
+      margin-top: 4px;
+      width: 100%;
+      padding: 0.5em;
+      height: 100px;
+    }
+  }
+
+  #submit-review {
+    padding: 0.5em 1.5em;
+    height: 44px;
+    width: auto;
+    background: #28b5b5;
+    color: #fff;
+    border-radius: 1em;
   }
 }
 
@@ -560,6 +634,13 @@ footer {
 // responsive
 
 @media screen and (min-width: 650px) {
+  #likeButtonContainer {
+    .like {
+      width: 75px;
+      font-size: 26px;
+      height: 75px;
+    }
+  }
   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
@@ -632,6 +713,9 @@ footer {
 }
 @media screen and (min-width: 935px) {
   .detail-restaurant {
+    width: 936px;
+  }
+  .form-reviewer {
     width: 936px;
   }
 }
