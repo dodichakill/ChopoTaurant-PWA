@@ -496,23 +496,45 @@ footer {
         border-radius: 1em;
         width: 100%;
         padding: 10px;
+        display: flex;
 
-        .user {
+        .logoUser {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
           display: flex;
-          justify-content: space-between;
-          margin-bottom: 10px;
+          justify-content: center;
+          align-items: center;
+          background: lightskyblue;
+          color: #0061a8;
+          margin-right: 10px;
+        }
+        .content {
+          width: 100%;
 
-          span.name {
-            color: #0061a8;
-            font-weight: bold;
-          }
-          span.date {
-            color: #28b5b5;
-            font-size: 12px;
+          .head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            width: 100%;
+
+            .name {
+              color: #0061a8;
+              font-weight: bold;
+            }
+            .date {
+              color: #28b5b5;
+              font-size: 12px;
+              background: #eeffffd2;
+              padding: 0 4px;
+            }
           }
         }
+
         .review {
           color: #0599ba;
+          font-weight: 400;
+          font-size: 15.5px;
         }
       }
     }
@@ -588,6 +610,8 @@ footer {
     background: #28b5b5;
     color: #fff;
     border-radius: 1em;
+    cursor: pointer;
+    margin-bottom: 10px;
   }
 }
 

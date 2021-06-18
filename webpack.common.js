@@ -32,7 +32,10 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+      openAnalyzer: false,
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/templates/index.html"),
       filename: "index.html",

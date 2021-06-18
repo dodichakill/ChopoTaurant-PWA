@@ -14,13 +14,13 @@ const Detail = {
           <form>
               <div class="form-name">
                   <label for="inputName" class="form-label">Name</label>
-                  <input type="text" name="inputName" class="form-control" id="inputName">
+                  <input type="text" name="inputName" class="form-control" id="inputName" placeholder="masukan nama anda disini">
               </div>
               <div class="form-review">
                   <label for="inputReview" class="form-label">Review</label>
-                  <textarea name="inputReview" class="form-control" id="inputReview"> </textarea>
+                  <textarea name="inputReview" class="form-control" id="inputReview" placeholder="masukan review anda disini" ></textarea>
               </div>
-              <button type="submit" id="submit-review">submit</button>
+              <submit id="submit-review">Kirim</submit>
           </form>
       </div>
       `;
@@ -28,25 +28,26 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const dataRestaurant = await RestaurantDbSource.detailRestaurant(url.id);
-    const data = dataRestaurant.restaurant;
-    const restaurantContainer = document.querySelector('#restaurant');
+    const dataRestaurants = await RestaurantDbSource.detailRestaurant(url.id);
+    const dataRestaurant = dataRestaurants.restaurant;
+    const restaurantContainer = document.getElementById("restaurant");
 
     // loading spinner
     restaurantContainer.innerHTML = '<div class="spinner"><i class="fas fa-search"></i></div>';
 
-    restaurantContainer.innerHTML = CreateRestaurantDetailTemplate(data);
+    // menampilkan konten halaman detail
+    restaurantContainer.innerHTML = await CreateRestaurantDetailTemplate(dataRestaurant);
 
     LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       favoriteRestaurants: FavoriteRestaurantIdb,
       restaurant: {
-        id: data.id,
-        name: data.name,
-        description: data.description,
-        rating: data.rating,
-        city: data.city,
-        pictureId: data.pictureId,
+        id: dataRestaurant.id,
+        name: dataRestaurant.name,
+        description: dataRestaurant.description,
+        rating: dataRestaurant.rating,
+        city: dataRestaurant.city,
+        pictureId: dataRestaurant.pictureId,
       },
     });
 
@@ -71,6 +72,7 @@ const Detail = {
         nameInput.value = '';
         reviewInput.value = '';
         alert('berhasil menambahkan review baru');
+        self.skipWaiting();
         location.reload();
       }
     });

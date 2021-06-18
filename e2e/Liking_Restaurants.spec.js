@@ -67,3 +67,6 @@ Scenario('unliking one restaurant', async ({ I }) => {
 });
 
 // akhir testing untuk fitur liking dan unliking
+
+// awal testing untuk fitur liking dan unliking
+// Feature('Post A new Reviewer Restaurant');

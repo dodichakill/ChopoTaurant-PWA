@@ -47,8 +47,15 @@ const CreateRestaurantDetailTemplate = (restaurant) => `
             <h3><i class="fas fa-comments"></i> Review</h3>
             ${restaurant.customerReviews.map(user => ` 
             <div class="reviewer">  
-                <p class="user"> <span class="name"> ${user.name}</span> <span class="date"> ${user.date} </span>  </p>  
-                <p class="review"> ${user.review} </p>  
+                <div class="logoUser">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="content"> 
+                    <div class="head">
+                         <div class="name"> ${user.name}</div> <div class="date"> ${user.date} </div>
+                    </div>
+                    <p class="review"> ${user.review} </p>  
+                </div>
             </div>`).join('')}
         </div>
     </div>`;

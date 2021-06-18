@@ -489,26 +489,48 @@ footer p {
   border-radius: 1em;
   width: 100%;
   padding: 10px;
+  display: flex;
 }
 
-.detail-restaurant .overview .review-container .reviewer .user {
+.detail-restaurant .overview .review-container .reviewer .logoUser {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightskyblue;
+  color: #0061a8;
+  margin-right: 10px;
+}
+
+.detail-restaurant .overview .review-container .reviewer .content {
+  width: 100%;
+}
+
+.detail-restaurant .overview .review-container .reviewer .content .head {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  width: 100%;
 }
 
-.detail-restaurant .overview .review-container .reviewer .user span.name {
+.detail-restaurant .overview .review-container .reviewer .content .head .name {
   color: #0061a8;
   font-weight: bold;
 }
 
-.detail-restaurant .overview .review-container .reviewer .user span.date {
+.detail-restaurant .overview .review-container .reviewer .content .head .date {
   color: #28b5b5;
   font-size: 12px;
+  background: #eeffffd2;
+  padding: 0 4px;
 }
 
 .detail-restaurant .overview .review-container .reviewer .review {
   color: #0599ba;
+  font-weight: 400;
+  font-size: 15.5px;
 }
 
 .favorite {
@@ -582,6 +604,8 @@ footer p {
   background: #28b5b5;
   color: #fff;
   border-radius: 1em;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .spinner {
