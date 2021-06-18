@@ -574,7 +574,7 @@ footer {
   font-family: "Courgette", cursive, serif;
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding: 10px 10px 15px 10px;
   background: #eeffff;
   margin: 10px auto 20px auto;
   border-radius: 1em;
@@ -604,9 +604,9 @@ footer {
   }
 
   #submit-review {
-    padding: 0.5em 1.5em;
     height: 44px;
     width: auto;
+    padding: 10px 25px;
     background: #28b5b5;
     color: #fff;
     border-radius: 1em;
