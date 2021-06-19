@@ -26,10 +26,6 @@ class App {
         const url = UrlParser.parseActiveUrlWithCombiner();
         const page = routes[url];
 
-        const winUrl = window.location.hash;
-        const notFound = `<h1> Halaman Tidak Ditemukan </h1>`;
-        console.log(page);
-
         // menambahkan halaman 404 not found untuk URL halaman yang tidak terdaftar
         if (!page) {
             this._content.innerHTML = await pageNotFound.render();
