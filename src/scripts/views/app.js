@@ -1,6 +1,7 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
+import pageNotFound from './pages/404page';
 
 class App {
     constructor({ button, drawer, content }) {
@@ -27,12 +28,16 @@ class App {
 
         const winUrl = window.location.hash;
         const notFound = `<h1> Halaman Tidak Ditemukan </h1>`;
-        if (winUrl === 'aaa') {
-            this._content.innerHTML = await notFound.render();
-            await notFound.afterRender();
+        console.log(page);
+
+        // menambahkan halaman 404 not found untuk URL halaman yang tidak terdaftar
+        if (!page) {
+            this._content.innerHTML = await pageNotFound.render();
+            await pageNotFound.afterRender();
+        } else {
+            this._content.innerHTML = await page.render();
+            await page.afterRender();
         }
-        this._content.innerHTML = await page.render();
-        await page.afterRender();
     }
 }
 

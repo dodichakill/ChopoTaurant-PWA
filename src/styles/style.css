@@ -295,6 +295,50 @@ main article.content #list-restaurant {
   align-items: center;
 }
 
+.NotfoundWrap {
+  width: 100%;
+  height: 90vh;
+  background: #0379cc;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.NotfoundWrap .container {
+  width: 100%;
+  height: auto;
+}
+
+.NotfoundWrap h1 {
+  color: orange;
+  font-size: 11em;
+  font-family: "Lobster", serif;
+  font-weight: 700;
+}
+
+.NotfoundWrap h2 {
+  color: gold;
+  font-family: "Courgette", cursive, serif;
+  margin-bottom: 20px;
+}
+
+.NotfoundWrap a {
+  padding: 0.5em 1em;
+  height: 44px;
+  background: cadetblue;
+  color: white;
+  border-radius: 1em;
+  line-height: 44px;
+  text-decoration: none;
+  font-family: "Courgette", cursive, serif;
+}
+
+.NotfoundWrap a:hover {
+  background: orange;
+  color: #0061a8;
+}
+
 footer {
   font-family: "Courgette", cursive, serif;
   display: flex;
@@ -534,8 +578,8 @@ footer p {
 }
 
 .favorite {
-  display: grid;
-  height: 100%;
+  display: block;
+  min-height: 600px;
   width: 100%;
 }
 
