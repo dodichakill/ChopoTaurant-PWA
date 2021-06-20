@@ -7,7 +7,13 @@ import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 const Detail = {
   async render() {
     return `
-      <div id="restaurant" class="detail-restaurant"></div>
+      <div id="restaurant" class="detail-restaurant">
+
+        <div class="titleSkel loading" style="width:220px; height:40px; margin: 20px"></div>
+        <div class="wrapInfoSkel loading" > </div>
+
+      </div>
+
       <div id="likeButtonContainer"></div>
       <div class="form-reviewer">
       <h3><i class="fas fa-comment-medical"></i> buat reviewmu </h3>
@@ -20,7 +26,7 @@ const Detail = {
                   <label for="inputReview" class="form-label">Review</label>
                   <textarea name="inputReview" class="form-control" id="inputReview" placeholder="masukan review anda disini" ></textarea>
               </div>
-              <submit id="submit-review">Kirim</submit>
+              <button type="submit" id="submit-review">Kirim</button>
           </form>
       </div>
       `;
@@ -31,9 +37,6 @@ const Detail = {
     const dataRestaurants = await RestaurantDbSource.detailRestaurant(url.id);
     const dataRestaurant = dataRestaurants.restaurant;
     const restaurantContainer = document.getElementById("restaurant");
-
-    // loading spinner
-    restaurantContainer.innerHTML = '<div class="spinner"><i class="fas fa-search"></i></div>';
 
     // menampilkan konten halaman detail
     restaurantContainer.innerHTML = await CreateRestaurantDetailTemplate(dataRestaurant);
@@ -73,6 +76,7 @@ const Detail = {
         reviewInput.value = '';
         alert('berhasil menambahkan review baru');
         self.skipWaiting();
+        location.reload();
         location.reload();
       }
     });
