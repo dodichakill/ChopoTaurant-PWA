@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 
 const Home = {
   async render() {
-    return `
+    const content = `
         
     <section class="hero">
       <div class="hero-inner">
@@ -79,20 +79,244 @@ const Home = {
      
       <h3 tabindex="0">Explore Restaurant</h3>
       <div class="container">
-        <div id="list-restaurant"></div>
+        <div id="list-restaurant">
+        <!-- dummy card -->
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+        
+          <div class="card" tabindex="0">
+            <div class="cardImage loading" style="width: 100%; height: 160px;">
+            </div>
+            <div class="cardTitle">
+              <h4 class="loading">
+                <a href="/#/detail/"> </a>
+              </h4>
+            </div>
+            <div class="cardDesc loading" style="height:72px"> <p></p></div>
+          </div>
+
+        </div>
 
       </div>
 
     </article>
 
         `;
+    return content;
   },
 
   async afterRender() {
     // script fetch data API restaurant
     const urlRestaurantList = `${CONFIG.BASE_URL}list`;
     const containerRestaurants = document.getElementById("list-restaurant");
-    containerRestaurants.innerHTML = '<div class="spinner"><i class="fas fa-spinner"></i></div>';
+
     fetch(urlRestaurantList, {
       method: "GET",
       headers: {
@@ -106,7 +330,6 @@ const Home = {
         dataRest.forEach((data) => {
           dataRestaurant += createRestaurantItemTemplate(data);
         });
-
         containerRestaurants.innerHTML = dataRestaurant;
       });
   },
