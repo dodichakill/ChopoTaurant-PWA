@@ -250,6 +250,7 @@ main article.precontent .precards {
   justify-content: center;
   font-family: "Courgette", cursive, serif;
   color: #eeffff;
+  margin-bottom: 1em;
 }
 
 main article.precontent .precards .precard {
@@ -738,6 +739,7 @@ footer p {
 @media screen and (min-width: 769px) {
   section.hero {
     background-image: url("/images/heros/hero-image-large.jpg");
+    min-height: 390px;
   }
   section.hero .hero-inner h2.hero-title {
     line-height: 36px;

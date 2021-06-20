@@ -264,7 +264,7 @@ main {
       justify-content: center;
       font-family: "Courgette", cursive, serif;
       color: rgb(238, 255, 255);
-
+      margin-bottom: 1em;
       .precard {
         box-sizing: border-box;
         padding: 0.5em;
@@ -782,6 +782,7 @@ footer {
 @media screen and (min-width: 769px) {
   section.hero {
     background-image: url("/images/heros/hero-image-large.jpg");
+    min-height: 390px;
 
     .hero-inner {
       h2.hero-title {
