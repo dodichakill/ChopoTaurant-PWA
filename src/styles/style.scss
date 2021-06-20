@@ -195,7 +195,8 @@ body {
       box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.2);
     }
   }
-  .cardTitle {
+  .cardTitle,
+  .cardTitleSkeleton {
     font-family: "lobster", cursive, serif;
     font-weight: 600;
     font-size: 18px;

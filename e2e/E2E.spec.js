@@ -1,7 +1,5 @@
 const assert = require('assert');
 
-// awal testing untuk fitur liking dan unliking
-
 Feature('Liking Restaurants');
 
 Before(({ I }) => {
@@ -66,7 +64,25 @@ Scenario('unliking one restaurant', async ({ I }) => {
   assert.strictEqual(noFavRestaurant, firstCondition);
 });
 
-// akhir testing untuk fitur liking dan unliking
+Scenario('Customer Review', async ({ I }) => {
+  I.see(firstCondition, '#restaurant');
 
-// awal testing untuk fitur liking dan unliking
-// Feature('Post A new Reviewer Restaurant');
+  I.amOnPage('/');
+
+  I.seeElement('.cardTitle a');
+  I.click(locate('.cardTitle a').first());
+
+  I.seeElement('.form-reviewer form');
+
+  const reviewText = 'Halo ini review dari testing E2E';
+
+  I.fillField('inputName', 'Dodi');
+  I.fillField('inputReview', reviewText);
+
+  I.click("#submit-review");
+
+  const reviewLast = locate('.content .review').last();
+  const textLastReview = await I.grabTextFrom(reviewLast);
+
+  assert.strictEqual(reviewText, textLastReview);
+});

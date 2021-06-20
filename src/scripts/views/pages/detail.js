@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurantdb-source';
-import { CreateRestaurantDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
+import { CreateRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
@@ -75,9 +75,6 @@ const Detail = {
         nameInput.value = '';
         reviewInput.value = '';
         alert('berhasil menambahkan review baru');
-        self.skipWaiting();
-        location.reload();
-        location.reload();
       }
     });
   },
