@@ -9,7 +9,8 @@
     "build-image": "node sharp.js",
     "test": "karma start",
     "lint": "eslint ./src",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "uglify-css": "uglifycss --ugly-comments ./src/styles/style.css > ./src/styles/uglifyStyle.css"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
@@ -50,6 +51,7 @@
     "idb": "^6.1.0",
     "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.5",
-    "serviceworker-webpack-plugin": "^1.0.1"
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "uglifycss": "^0.0.29"
   }
 }
