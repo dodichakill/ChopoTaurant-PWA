@@ -705,17 +705,20 @@ footer {
   animation: loading 1.2s infinite;
 }
 
+// skeleton detail page
+
+.wrapInfoSkel {
+  width: 300px;
+  height: 440px;
+  margin-bottom: 10px;
+}
+
 @keyframes loading {
   100% {
     transform: translateX(100%);
   }
 }
 
-// skeleton detail page
-.wrapInfoSkel {
-  width: 320px;
-  height: 440px;
-}
 // responsive
 
 @media screen and (min-width: 650px) {

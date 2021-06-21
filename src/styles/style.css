@@ -689,15 +689,16 @@ footer p {
   animation: loading 1.2s infinite;
 }
 
+.wrapInfoSkel {
+  width: 300px;
+  height: 440px;
+  margin-bottom: 10px;
+}
+
 @keyframes loading {
   100% {
     transform: translateX(100%);
   }
-}
-
-.wrapInfoSkel {
-  width: 320px;
-  height: 440px;
 }
 
 @media screen and (min-width: 650px) {

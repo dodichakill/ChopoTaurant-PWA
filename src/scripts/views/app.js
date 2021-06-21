@@ -1,7 +1,7 @@
-import DrawerInitiator from '../utils/drawer-initiator';
-import UrlParser from '../routes/url-parser';
-import routes from '../routes/routes';
-import pageNotFound from './pages/404page';
+import DrawerInitiator from "../utils/drawer-initiator";
+import UrlParser from "../routes/url-parser";
+import routes from "../routes/routes";
+import pageNotFound from "./pages/404page";
 
 class App {
     constructor({ button, drawer, content }) {

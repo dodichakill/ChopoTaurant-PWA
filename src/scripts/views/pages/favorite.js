@@ -1,5 +1,5 @@
-import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import FavoriteRestaurantIdb from "../../data/favorite-restaurant-idb";
+import { createRestaurantItemTemplate } from "../templates/template-creator";
 
 const Favorite = {
     async render() {
@@ -15,7 +15,7 @@ const Favorite = {
     async afterRender() {
         const restaurant = await FavoriteRestaurantIdb.getAllRestaurant();
 
-        const restaurantContainer = document.querySelector('#restaurant');
+        const restaurantContainer = document.querySelector("#restaurant");
         if (restaurant.length === 0) {
             restaurantContainer.innerHTML = '<div class="not-found"><h3>Kamu belum mempunyai restaurant favorite</h3></div>';
         }

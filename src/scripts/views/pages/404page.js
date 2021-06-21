@@ -12,7 +12,7 @@ const pageNotFound = {
   },
 
   async afterRender() {
-    const err = document.querySelector('.error');
+    const err = document.querySelector(".error");
 
     err.innerHTML = "<p>silahkan kembali ke halaman utama</p>";
   },

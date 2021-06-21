@@ -1,5 +1,5 @@
-import API_ENDPOINT from '../globals/api-endpoint';
-import CONFIG from '../globals/config';
+import API_ENDPOINT from "../globals/api-endpoint";
+import CONFIG from "../globals/config";
 
 class RestaurantDbSource {
     static async listDataRestaurant() {
@@ -15,10 +15,10 @@ class RestaurantDbSource {
 
     static async postRestaurant(data) {
         const rawResponse = await fetch(API_ENDPOINT.POST_REVIEW, {
-            method: 'POST',
+            method: "POST",
             headers: {
-                'Content-type': 'application/json',
-                'X-Auth-Token': CONFIG.KEY,
+                "Content-type": "application/json",
+                "X-Auth-Token": CONFIG.KEY,
             },
             body: JSON.stringify(data),
         });
