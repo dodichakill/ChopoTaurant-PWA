@@ -32,6 +32,7 @@ const Detail = {
     });
 
     // add new reviewer
+    const reviewContainer = document.querySelector(".form-reviewer");
     const btnSubmit = document.querySelector("#submit-review");
     const nameInput = document.querySelector("#inputName");
     const reviewInput = document.querySelector("#inputReview");
