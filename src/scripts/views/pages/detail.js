@@ -53,9 +53,6 @@ const Detail = {
         nameInput.value = "";
         reviewInput.value = "";
         alert("berhasil menambahkan review baru");
-        setTimeout(() => {
-          location.reload();
-        }, 1000);
       }
     });
   },
