@@ -1,1 +1,1 @@
-<h1>ChopoTaurant Apps</h1>
+<h1>ChopoTaurant Apps - PWA</h1>
