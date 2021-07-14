@@ -64,9 +64,9 @@ Scenario('unliking one restaurant', async ({ I }) => {
   assert.strictEqual(noFavRestaurant, firstCondition);
 });
 
-Scenario('Customer Review', async ({ I }) => {
-  I.see(firstCondition, '#restaurant');
+Feature('Customer Review.');
 
+Scenario('Review a restaurant', async ({ I }) => {
   I.amOnPage('/');
 
   I.seeElement('.cardTitle a');
@@ -80,6 +80,10 @@ Scenario('Customer Review', async ({ I }) => {
   I.fillField('inputReview', reviewText);
 
   I.click("#submit-review");
+
+  I.amOnPage('/');
+  I.seeElement('.cardTitle a');
+  I.click(locate('.cardTitle a').first());
 
   const reviewLast = locate('.content .review').last();
   const textLastReview = await I.grabTextFrom(reviewLast);
