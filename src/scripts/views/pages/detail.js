@@ -1,5 +1,5 @@
 import UrlParser from "../../routes/url-parser";
-import RestaurantDbSource from "../../data/restaurantdb-source";
+import RestaurantAPISource from "../../data/restaurant-api-source";
 import { CreateRestaurantDetailTemplate, contentDetailFirst } from "../templates/template-creator";
 import LikeButtonPresenter from "../../utils/like-button-presenter";
 import FavoriteRestaurantIdb from "../../data/favorite-restaurant-idb";
@@ -11,7 +11,7 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const dataRestaurants = await RestaurantDbSource.detailRestaurant(url.id);
+    const dataRestaurants = await RestaurantAPISource.detailRestaurant(url.id);
     const dataRestaurant = dataRestaurants.restaurant;
     const restaurantContainer = document.getElementById("restaurant");
 
@@ -48,7 +48,7 @@ const Detail = {
           name: nameInput.value,
           review: reviewInput.value,
         };
-        RestaurantDbSource.postRestaurant(dataInput);
+        RestaurantAPISource.postRestaurant(dataInput);
         nameInput.value = "";
         reviewInput.value = "";
         alert("berhasil menambahkan review baru");

@@ -1,7 +1,7 @@
 import API_ENDPOINT from "../globals/api-endpoint";
 import CONFIG from "../globals/config";
 
-class RestaurantDbSource {
+class RestaurantAPISource {
     static async listDataRestaurant() {
         const response = await fetch(API_ENDPOINT.LIST_DATA_RESTAURANT);
         const responseJson = await response.json();
@@ -26,4 +26,4 @@ class RestaurantDbSource {
     }
 }
 
-export default RestaurantDbSource;
+export default RestaurantAPISource;
